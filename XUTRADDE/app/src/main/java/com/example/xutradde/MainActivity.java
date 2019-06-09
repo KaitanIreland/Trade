@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;
     private int i;
 
-    SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         al.add("javascript");
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
+
+        SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
 
         flingContainer.setAdapter(arrayAdapter);
