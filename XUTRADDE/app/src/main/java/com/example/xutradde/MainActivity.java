@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                Toast.makeText(MainActivity.this, "Left!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "No!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                Toast.makeText(MainActivity.this, "Right!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Yes!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
