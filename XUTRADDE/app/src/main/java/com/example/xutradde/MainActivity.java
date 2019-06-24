@@ -16,14 +16,19 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
+    private ArrayAdapter<Item> arrayAdapter2;
     private int i;
+    private ArrayList<Item> arrayItems;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        arrayItems = new ArrayList<>();
+        arrayItems.add(new Item());
+        arrayItems.add(new Item());
+        arrayItems.add(new Item(12,"Haaris","Hamid","Poor"));
 
         al = new ArrayList<>();
         al.add("php");
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
 
+        arrayAdapter2 = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, arrayItems );
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
 
